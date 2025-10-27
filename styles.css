@@ -1,0 +1,195 @@
+:root{
+  --bg: #0f172a;          /* slate-900 */
+  --panel: #111827;       /* gray-900 */
+  --panel-alt:#0b1220;    /* deep navy tint */
+  --text:#e5e7eb;         /* gray-200 */
+  --muted:#94a3b8;        /* slate-400 */
+  --primary:#38bdf8;      /* blue-cyan for buttons */
+  --primary-2:#60a5fa;    /* blue-400 */
+  --accent:#22d3ee;       /* cyan-400 */
+  --card:#0b152b;
+  --border:#1f2937;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+
+  /* SnowApp gradient colors (neon lime -> cyan -> blue) */
+  --snow-lime:#a3e635;
+  --snow-cyan:#22d3ee;
+  --snow-blue:#38bdf8;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";
+  background: linear-gradient(180deg, var(--bg), var(--panel-alt) 60%, var(--bg));
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+.site-header{
+  position: sticky; top:0; z-index: 50;
+  background: rgba(15, 23, 42, .7);
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  min-height:64px;
+}
+.brand{display:flex;gap:.6rem;align-items:center;color:var(--text);text-decoration:none}
+.brand-logo{
+  width:36px;height:36px;border-radius:10px;display:inline-block;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+}
+.brand-text{font-weight:800;letter-spacing:.5px}
+
+/* nav */
+.site-nav{display:flex;gap:1rem}
+.site-nav a{
+  color:var(--muted);text-decoration:none;font-weight:600;padding:.5rem .75rem;border-radius:8px
+}
+.site-nav a:hover{color:var(--text);background:#0e1a32}
+.nav-toggle{display:none;background:none;border:0;color:var(--text);cursor:pointer}
+.nav-bar{display:block;width:24px;height:2px;background:var(--text);margin:5px 0;border-radius:2px}
+
+/* hero */
+.hero{
+  padding:96px 0 64px;
+  background:
+    radial-gradient(800px 300px at 20% -10%, rgba(34,211,238,.25), transparent 60%),
+    radial-gradient(800px 300px at 80% 0%, rgba(56,189,248,.25), transparent 60%);
+}
+.hero-inner{max-width:920px}
+.hero h1{font-size:clamp(2rem, 4vw, 3rem);line-height:1.15;margin:.25rem 0 .75rem}
+.hero p{color:var(--muted);max-width:60ch}
+.hero-cta{margin-top:1.25rem;display:flex;gap:.75rem;flex-wrap:wrap}
+
+.btn{
+  display:inline-block;padding:.8rem 1.1rem;border-radius:12px;
+  font-weight:700;text-decoration:none;cursor:pointer;border:1px solid transparent
+}
+.btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#081225}
+.btn.ghost{background:transparent;color:var(--text);border-color:#23314b}
+.btn:hover{filter:brightness(1.08)}
+
+/* sections */
+.section{padding:72px 0}
+.section.alt{background:rgba(8,18,37,.35);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.section h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 .5rem}
+.section-lead{color:var(--muted);margin:0 0 1.25rem}
+
+/* cards grid */
+.grid{display:grid;gap:16px}
+.cards{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.cards{grid-template-columns:1fr}}
+
+.card{
+  background: linear-gradient(180deg, var(--card), #0c1a33);
+  border:1px solid var(--border);
+  border-radius:16px;padding:18px 16px;box-shadow: var(--shadow)
+}
+.card h3{margin:.25rem 0 .35rem;font-size:1.1rem}
+.card p{color:var(--muted);margin:0}
+
+/* about */
+.about-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+@media (max-width:900px){.about-wrap{grid-template-columns:1fr}}
+.checks{list-style:none;padding:0;margin:.75rem 0 0}
+.checks li{margin:.35rem 0;padding-left:1.4rem;position:relative}
+.checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--snow-cyan);font-weight:800}
+.about-badge{text-align:center}
+.years-badge{
+  display:grid;place-items:center;width:140px;height:140px;margin:0 auto 10px;
+  border-radius:24px;border:1px solid var(--border);
+  background: radial-gradient(600px 300px at 50% -20%, rgba(34,211,238,.18), transparent 60%), #0c1a33;
+  box-shadow: var(--shadow);
+}
+.years{font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--snow-cyan),var(--snow-blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.label{color:var(--muted);text-transform:uppercase;letter-spacing:2px;font-size:.8rem}
+.since{color:var(--muted)}
+
+/* credentials */
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+.pill{border:1px solid var(--border);padding:.45rem .7rem;border-radius:999px;background:#0b152b;color:var(--text);font-weight:600}
+.note{color:var(--muted);margin-top:12px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.contact-form{display:grid;gap:12px;margin-top:.5rem}
+.contact-form label{display:grid;gap:.4rem;font-weight:600}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:.85rem;border-radius:12px;border:1px solid #20324f;background:#0c162a;color:var(--text)
+}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid #1e3a8a}
+.tiny{color:var(--muted);font-size:.9rem;margin:.5rem 0 0}
+.center{text-align:center}
+
+.contact-card{
+  background: linear-gradient(180deg, var(--card), #0c1a33);
+  border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow: var(--shadow)
+}
+.map-wrap{margin-top:10px;border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.map-wrap iframe{width:100%;height:260px;border:0}
+
+/* footer */
+.site-footer{border-top:1px solid var(--border);padding:28px 0;background:#0b1220}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.footer-inner p{margin:0;color:var(--muted)}
+.footer-nav{display:flex;gap:10px}
+.footer-nav a{color:var(--muted);text-decoration:none;padding:.35rem .6rem;border-radius:8px}
+.footer-nav a:hover{color:var(--text);background:#0e1a32}
+
+/* mobile nav */
+@media (max-width:800px){
+  .nav-toggle{display:block}
+  .site-nav{
+    position:absolute;right:20px;top:64px;flex-direction:column;gap:0;
+    background:#0c162a;border:1px solid var(--border);border-radius:12px;overflow:hidden;
+    transform:translateY(-10px);opacity:0;pointer-events:none;transition:.2s ease
+  }
+  .site-nav.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .site-nav a{padding:.8rem 1rem;border-bottom:1px solid var(--border)}
+  .site-nav a:last-child{border-bottom:0}
+}
+
+/* ---------- SnowApp promo styles ---------- */
+.product-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+@media (max-width:900px){.product-wrap{grid-template-columns:1fr}}
+.product-eyebrow{
+  font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:#a2adc4;font-size:.8rem;margin-bottom:.4rem
+}
+/* SnowApp gradient word */
+.gradient-word{
+  background: linear-gradient(135deg, var(--snow-lime), var(--snow-cyan) 40%, var(--snow-blue));
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.product-cta{display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap}
+.product-card{
+  background: linear-gradient(180deg, var(--card), #0c1a33);
+  border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow: var(--shadow)
+}
+/* SnowApp icon frame with same gradient as a border glow */
+.icon-link{display:grid;place-items:center;margin-bottom:12px}
+.app-icon{
+  width:120px;height:120px;border-radius:24px;display:block;object-fit:cover;
+  border:2px solid transparent;
+  background:
+    linear-gradient(#0c1a33,#0c1a33) padding-box,
+    linear-gradient(135deg,var(--snow-lime),var(--snow-cyan) 40%,var(--snow-blue)) border-box;
+  box-shadow: 0 10px 28px rgba(34,211,238,.25);
+}
+.video-embed{
+  position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
+  border:1px solid var(--border);background:#0a1427
+}
+.video-embed iframe, .video-embed video{width:100%;height:100%;border:0;display:block}
+.made-by{opacity:.9}
+
+/* Small utility */
+.hide{display:none!important}
