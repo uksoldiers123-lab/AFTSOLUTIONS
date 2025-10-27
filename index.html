@@ -4,44 +4,64 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AFT SOLUTIONS LLC — Financial Consulting & Business Services</title>
-  <meta name="description" content="AFT SOLUTIONS LLC: financial consultants since 2006. Grant writing, business plans, credit building, lender network, tax prep, web design, and financial analysis. New: SnowApp." />
+  <meta name="description" content="AFT SOLUTIONS LLC: consultants since 2006. Grant writing, business plans, credit building, lender network, tax prep, web design, and financial analysis. New: SnowApp." />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Favicon (AFT icon) -->
-  <link rel="icon" href="images/aft-app-icon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="images/aft-app-icon.png" />
-  <!-- Schema.org: Local Business -->
+
+  <!-- Favicon (inline AFT icon) -->
+  <link rel="icon" type="image/svg+xml"
+    href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#F6E27A"/>
+          <stop offset="0.5" stop-color="#E7C75F"/>
+          <stop offset="1" stop-color="#CFA64E"/>
+        </linearGradient>
+      </defs>
+      <rect x="10" y="10" width="180" height="180" rx="36" fill="%230B0B0B"/>
+      <text x="100" y="128" font-family="Inter,Arial,Helvetica,sans-serif" font-size="96" font-weight="800" letter-spacing="2" text-anchor="middle" fill="url(%23g)">AFT</text>
+    </svg>' />
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FinancialService",
-    "name": "AFT SOLUTIONS LLC",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3355 Pio Nono Ave Ste 4",
-      "addressLocality": "Macon",
-      "addressRegion": "GA",
-      "postalCode": "31206",
-      "addressCountry": "US"
-    },
-    "url": "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/",
-    "description": "Financial consultants offering grant writing, business plans, credit building, lender network access, tax prep, web design, and financial analysis. New: SnowApp (see snowapp.net).",
-    "foundingDate": "2006"
+    "@context":"https://schema.org",
+    "@type":"FinancialService",
+    "name":"AFT SOLUTIONS LLC",
+    "address":{"@type":"PostalAddress","streetAddress":"3355 Pio Nono Ave Ste 4","addressLocality":"Macon","addressRegion":"GA","postalCode":"31206","addressCountry":"US"},
+    "url":"https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/",
+    "description":"Financial consultants offering grant writing, business plans, credit building, lender network access, tax prep, web design, and financial analysis. New: SnowApp (snowapp.net).",
+    "foundingDate":"2006"
   }
   </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">
-        <img class="brand-logo" src="images/aft-app-icon.svg" alt="AFT SOLUTIONS logo" />
+      <a class="brand" href="#home" aria-label="AFT SOLUTIONS LLC Home">
+        <!-- INLINE AFT ICON -->
+        <svg class="brand-logo" width="36" height="36" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#F6E27A"/>
+              <stop offset="0.5" stop-color="#E7C75F"/>
+              <stop offset="1" stop-color="#CFA64E"/>
+            </linearGradient>
+          </defs>
+        <rect x="10" y="10" width="180" height="180" rx="36" fill="#0B0B0B"/>
+        <text x="100" y="128" font-family="Inter,Arial,Helvetica,sans-serif" font-size="96" font-weight="800" letter-spacing="2" text-anchor="middle" fill="url(#gold)">AFT</text>
+        </svg>
         <span class="brand-text">AFT SOLUTIONS LLC</span>
       </a>
+
       <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">
         <span class="nav-bar"></span><span class="nav-bar"></span><span class="nav-bar"></span>
       </button>
       <nav class="site-nav" aria-label="Primary">
         <a href="#snowapp">SnowApp</a>
         <a href="#services">Services</a>
+        <a href="#signup">Sign Up</a>
+        <a href="#investors">Investors</a>
         <a href="#about">About</a>
         <a href="#credentials">Credentials</a>
         <a href="#contact">Contact</a>
@@ -55,7 +75,7 @@
         <h1>Financial guidance to financial freedom.</h1>
         <p>Since 2006, AFT SOLUTIONS LLC has helped individuals and companies secure funding, build credit, and get legally and financially prepared for long-term success.</p>
         <div class="hero-cta">
-          <a class="btn primary" href="#contact">Request a Consultation</a>
+          <a class="btn primary" href="#signup">Start a Project</a>
           <a class="btn ghost" href="#services">Explore Services</a>
         </div>
       </div>
@@ -67,9 +87,7 @@
         <div class="product-copy">
           <div class="product-eyebrow">New from AFT SOLUTIONS</div>
           <h2>Introducing <span class="gradient-word">SnowApp</span></h2>
-          <p class="section-lead">
-            A modern, secure money app focused on simple, seamless everyday use—with a clean interface and room to grow.
-          </p>
+          <p class="section-lead">A modern, secure money app focused on simple, seamless everyday use—with a clean interface and room to grow.</p>
           <ul class="checks">
             <li>Fast, intuitive mobile experience</li>
             <li>Privacy-minded, modern design</li>
@@ -83,28 +101,36 @@
         </div>
 
         <div class="product-card">
-          <!-- Clickable SnowApp icon -->
+          <!-- Inline SnowApp icon -->
           <a class="icon-link" href="https://snowapp.net" target="_blank" rel="noopener" aria-label="Open SnowApp.net">
-            <!-- Replace with your real icon (200×200 PNG) -->
-            <img src="images/snowapp-icon.png" alt="SnowApp icon" class="app-icon" />
+            <svg class="app-icon" viewBox="0 0 200 200" role="img" aria-label="SnowApp icon">
+              <defs>
+                <linearGradient id="snowgrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#a3e635"/>
+                  <stop offset="50%" stop-color="#22d3ee"/>
+                  <stop offset="100%" stop-color="#38bdf8"/>
+                </linearGradient>
+              </defs>
+              <rect x="4" y="4" width="192" height="192" rx="24" fill="white"/>
+              <g stroke="url(#snowgrad)" stroke-linecap="round" stroke-width="12" fill="none">
+                <line x1="100" y1="28" x2="100" y2="172"/>
+                <line x1="28" y1="100" x2="172" y2="100"/>
+                <line x1="38" y1="62" x2="162" y2="138"/>
+                <line x1="38" y1="138" x2="162" y2="62"/>
+                <line x1="72" y1="44" x2="60" y2="32"/><line x1="72" y1="44" x2="84" y2="32"/>
+                <line x1="128" y1="44" x2="116" y2="32"/><line x1="128" y1="44" x2="140" y2="32"/>
+                <line x1="156" y1="72" x2="168" y2="60"/><line x1="156" y1="72" x2="168" y2="84"/>
+                <line x1="156" y1="128" x2="168" y2="116"/><line x1="156" y1="128" x2="168" y2="140"/>
+                <line x1="128" y1="156" x2="140" y2="168"/><line x1="128" y1="156" x2="116" y2="168"/>
+                <line x1="72" y1="156" x2="60" y2="168"/><line x1="72" y1="156" x2="84" y2="168"/>
+                <line x1="44" y1="128" x2="32" y2="140"/><line x1="44" y1="128" x2="32" y2="116"/>
+                <line x1="44" y1="72" x2="32" y2="84"/><line x1="44" y1="72" x2="32" y2="60"/>
+              </g>
+            </svg>
           </a>
 
-          <!-- Video slot -->
           <div id="snowapp-video" class="video-embed">
-            <!-- OPTION A: YouTube/Vimeo (replace VIDEO_ID) -->
-            <iframe
-              title="SnowApp Promo"
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-
-            <!-- OPTION B: Self-hosted MP4 (uncomment and add promo.mp4 to repo root)
-            <video controls poster="images/snowapp-poster.jpg">
-              <source src="promo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            -->
+            <iframe title="SnowApp Promo" src="https://www.youtube.com/embed/VIDEO_ID" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
 
           <p class="tiny center made-by">Made by <strong>AFT SOLUTIONS LLC</strong></p>
@@ -112,54 +138,225 @@
       </div>
     </section>
 
+    <!-- Services overview -->
     <section id="services" class="section">
       <div class="container">
         <h2>What we do</h2>
-        <p class="section-lead">A full-stack advisory team with a deep rolodex of lenders and partners for any financial situation.</p>
+        <p class="section-lead">End-to-end strategy, documentation, and capital readiness—backed by 19+ years of execution.</p>
 
         <div class="grid cards">
-          <article class="card">
-            <h3>Grant Writing</h3>
-            <p>Competitive grant research, proposal drafting, compliance checklists, and submission support to maximize approvals.</p>
-          </article>
-          <article class="card">
-            <h3>Business Plans (Freelance & Pro)</h3>
-            <p>Investor-ready plans with financials, market analysis, and go-to-market—tailored for lenders and grant committees.</p>
-          </article>
-          <article class="card">
-            <h3>Credit Building Tools</h3>
-            <p>Personal & business credit roadmaps, tradeline strategy, and access to professional legal credit doctors.</p>
-          </article>
-          <article class="card">
-            <h3>Company Structure & Compliance</h3>
-            <p>Entity formation, operating agreements, EIN/registrations, and credentialing to get you legally prepared.</p>
-          </article>
-          <article class="card">
-            <h3>Lender Network Access</h3>
-            <p>A curated rolodex of lenders and organizations—matched to your industry, stage, and capital needs.</p>
-          </article>
-          <article class="card">
-            <h3>Tax Preparation</h3>
-            <p>Tax planning & filing for individuals and businesses, with a focus on accuracy and audit-readiness.</p>
-          </article>
-          <article class="card">
-            <h3>Web Design</h3>
-            <p>Professional websites that pass lender and grant credibility checks and convert visitors into clients.</p>
-          </article>
-          <article class="card">
-            <h3>Financial Analysis</h3>
-            <p>Cash-flow modeling, budgeting, KPI dashboards, and program setup to keep you on track for success.</p>
-          </article>
+          <article class="card"><h3>Grant Writing</h3><p>Research, narrative, budgets, compliance, submission support.</p></article>
+          <article class="card"><h3>Business Plans</h3><p>Lender/investor-ready plans with market & financial models.</p></article>
+          <article class="card"><h3>Credit Building</h3><p>Roadmaps & legal credit specialists for personal/business.</p></article>
+          <article class="card"><h3>Company Structure</h3><p>Entity setup, agreements, EIN, registrations, credentialing.</p></article>
+          <article class="card"><h3>Lender Network</h3><p>Curated rolodex matched to stage, industry & need.</p></article>
+          <article class="card"><h3>Tax Preparation</h3><p>Planning & filing for individuals and businesses.</p></article>
+          <article class="card"><h3>Web Design</h3><p>Credible sites that pass lender & grant checks.</p></article>
+          <article class="card"><h3>Financial Analysis</h3><p>Cash-flow, budgets, KPIs, dashboards, program setup.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section alt">
+    <!-- Service Sign-Up -->
+    <section id="signup" class="section alt">
+      <div class="container">
+        <h2>Start a Project</h2>
+        <p class="section-lead">Tell us what you need. We’ll review and contact you with next steps.</p>
+
+        <form class="intake-form" method="post" action="https://formspree.io/f/your-id">
+          <div class="form-grid">
+            <label>Full Name<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Phone<input type="tel" name="phone" placeholder="(xxx) xxx-xxxx"></label>
+            <label>Company / Organization<input type="text" name="company"></label>
+          </div>
+
+          <fieldset class="fieldset">
+            <legend>Services</legend>
+            <div class="checks-grid">
+              <label><input type="checkbox" name="services" value="Grant Writing"> Grant Writing</label>
+              <label><input type="checkbox" name="services" value="Business Plan"> Business Plan</label>
+              <label><input type="checkbox" name="services" value="Credit Building"> Credit Building</label>
+              <label><input type="checkbox" name="services" value="Company Structure"> Company Structure & Compliance</label>
+              <label><input type="checkbox" name="services" value="Lender Network"> Lender Network Access</label>
+              <label><input type="checkbox" name="services" value="Tax Preparation"> Tax Preparation</label>
+              <label><input type="checkbox" name="services" value="Web Design"> Web Design</label>
+              <label><input type="checkbox" name="services" value="Financial Analysis"> Financial Analysis</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend>Add-ons</legend>
+            <div class="checks-grid">
+              <label><input type="checkbox" name="addons" value="Pitch Deck"> Pitch Deck</label>
+              <label><input type="checkbox" name="addons" value="Market Research"> Market Research</label>
+              <label><input type="checkbox" name="addons" value="Financial Model"> Financial Model</label>
+              <label><input type="checkbox" name="addons" value="DUNS / SAM Setup"> DUNS / SAM Setup</label>
+              <label><input type="checkbox" name="addons" value="Branding Kit"> Branding Kit</label>
+              <label><input type="checkbox" name="addons" value="Ongoing Advisory"> Ongoing Advisory</label>
+            </div>
+          </fieldset>
+
+          <div class="form-grid">
+            <label>Budget Range
+              <select name="budget">
+                <option value="" selected disabled>Select one</option>
+                <option>Under $1,000</option><option>$1,000–$3,000</option>
+                <option>$3,000–$7,500</option><option>$7,500–$15,000</option>
+                <option>$15,000+</option>
+              </select>
+            </label>
+            <label>Timeline
+              <select name="timeline">
+                <option value="" selected disabled>Select one</option>
+                <option>Urgent (1–2 weeks)</option><option>Soon (2–4 weeks)</option>
+                <option>Near-term (1–3 months)</option><option>Planning (3+ months)</option>
+              </select>
+            </label>
+            <label>Preferred Contact
+              <select name="contact_method">
+                <option>Email</option><option>Phone</option><option>Text</option>
+              </select>
+            </label>
+            <label>Best Time to Reach You
+              <input type="text" name="best_time" placeholder="e.g., weekdays 2–5pm ET">
+            </label>
+          </div>
+
+          <label class="block">Project Details / Comments
+            <textarea name="details" rows="6" placeholder="Goals, background, deadlines, links…"></textarea>
+          </label>
+
+          <div class="upload-row">
+            <span>Need to share files (RFPs, old plans, documents)?</span>
+            <a class="btn outline" href="https://www.dropbox.com/request/YOUR_FILE_REQUEST_ID" target="_blank" rel="noopener">Upload via Dropbox</a>
+          </div>
+
+          <input type="hidden" name="_subject" value="New AFT Solutions Project Intake">
+          <input type="text" name="_gotcha" class="hide" aria-hidden="true">
+
+          <button class="btn primary wide" type="submit">Submit Request</button>
+          <p class="tiny">We typically respond within 1–2 business days.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- NEW: Investors Pitch -->
+    <section id="investors" class="section">
+      <div class="container">
+        <h2>Investors</h2>
+        <p class="section-lead">AFT SOLUTIONS LLC is a 2006-founded consulting studio building products and programs that move clients toward financial freedom. Our flagship app is <strong>SnowApp</strong>.</p>
+
+        <div class="grid inv-grid">
+          <article class="card">
+            <h3>Problem</h3>
+            <p>Small businesses and creators struggle to become “fundable”: scattered paperwork, weak credit strategy, and limited access to the right lenders slow growth.</p>
+          </article>
+          <article class="card">
+            <h3>Solution</h3>
+            <p>AFT delivers capital-readiness services plus productized tools—culminating in SnowApp—to streamline onboarding, compliance, and financial workflows.</p>
+          </article>
+          <article class="card">
+            <h3>Products</h3>
+            <ul>
+              <li><strong>SnowApp</strong> – modern money app (snowapp.net)</li>
+              <li>Consulting Programs – grant writing, plans, credit, structure</li>
+              <li>Templates & Tooling – financial models, decks, readiness kits</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Business Model</h3>
+            <ul>
+              <li>Service fees (fixed + milestone)</li>
+              <li>Productized packages & subscriptions</li>
+              <li>Affiliate/partner revenue via lender & vendor network</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Traction</h3>
+            <ul>
+              <li>Operating since 2006 (19+ years)</li>
+              <li>Active pipeline via referrals and network</li>
+              <li>SnowApp promo launching with AFT client base</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Go-to-Market</h3>
+            <ul>
+              <li>Referrals, partner channels, and lender alliances</li>
+              <li>Content + workshops (capital readiness, grants)</li>
+              <li>SnowApp waitlist integrated in client flows</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Moat</h3>
+            <ul>
+              <li>Process playbooks from 19+ years of cases</li>
+              <li>Curated rolodex of lenders & specialists</li>
+              <li>Brand trust + execution speed</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Roadmap (12 months)</h3>
+            <ol>
+              <li>Formalize productized service tiers</li>
+              <li>SnowApp growth: waitlist → beta → public</li>
+              <li>Partner marketplace & training modules</li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="grid inv-ask">
+          <article class="card">
+            <h3>The Ask</h3>
+            <p>We’re seeking <strong>$50k–$250k</strong> in strategic capital to accelerate SnowApp promo, productized service packaging, and partner integrations.</p>
+            <p><em>Flexible structures:</em> revenue share, SAFE/convertible note, or project financing for specific programs.</p>
+          </article>
+
+          <article class="card">
+            <h3>Use of Funds</h3>
+            <table class="usefunds">
+              <thead><tr><th>Category</th><th>Allocation</th></tr></thead>
+              <tbody>
+                <tr><td>SnowApp marketing & onboarding</td><td>30%</td></tr>
+                <tr><td>Productized service build-out</td><td>25%</td></tr>
+                <tr><td>Compliance & vendor integrations</td><td>15%</td></tr>
+                <tr><td>Talent & specialist network</td><td>20%</td></tr>
+                <tr><td>Ops reserve</td><td>10%</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="card">
+            <h3>Model Snapshot</h3>
+            <ul>
+              <li>Avg service package: $1.5k–$7.5k</li>
+              <li>Product subscriptions: $29–$149/mo</li>
+              <li>Affiliate/partner take: 5–15% where applicable</li>
+            </ul>
+            <p class="tiny">*Illustrative—final pricing varies by scope and region.</p>
+          </article>
+
+          <article class="card">
+            <h3>FAQ</h3>
+            <details><summary>Is AFT a bank?</summary><p>No. AFT SOLUTIONS LLC is an independent consulting firm. SnowApp is a product app; regulated financial services are provided by licensed partners where applicable.</p></details>
+            <details><summary>What stage is SnowApp?</summary><p>Promo and partner alignment phase, preparing for staged roll-out tied to AFT client onboarding.</p></details>
+            <details><summary>How do investors stay updated?</summary><p>Quarterly email updates + a lightweight KPI dashboard.</p></details>
+          </article>
+        </div>
+
+        <div class="inv-cta">
+          <a class="btn primary" href="mailto:info@aftsolutionsllc.com?subject=Investor%20Inquiry%20—%20AFT%20SOLUTIONS">Request the Investor Overview</a>
+          <a class="btn ghost" href="#contact">Talk with the team</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
       <div class="container about-wrap">
         <div class="about-copy">
           <h2>About AFT SOLUTIONS LLC</h2>
           <p><strong>19+ years of experience.</strong> Founded in 2006, we’ve partnered with entrepreneurs, nonprofits, and growing companies to craft fundable plans, build durable credit, and secure resources.</p>
-          <p>Our mission is simple: pair practical strategy with the right relationships so you can execute confidently—no matter the financial challenge.</p>
           <ul class="checks">
             <li>Seasoned consultants & legal credit specialists</li>
             <li>End-to-end support—from paperwork to capital</li>
@@ -176,10 +373,10 @@
       </div>
     </section>
 
-    <section id="credentials" class="section">
+    <section id="credentials" class="section alt">
       <div class="container">
         <h2>Credentials & Partners</h2>
-        <p class="section-lead">AFT SOLUTIONS LLC works with a network of lenders, credit professionals, tax preparers, and service providers to match your needs.</p>
+        <p class="section-lead">We work with a network of lenders, credit professionals, tax preparers, and service providers to match your needs.</p>
         <div class="pill-row">
           <span class="pill">Lender Network</span>
           <span class="pill">Grant Portals</span>
@@ -188,52 +385,32 @@
           <span class="pill">Web & Brand Team</span>
           <span class="pill">Financial Analysts</span>
         </div>
-        <p class="note">Note: Partners are engaged based on fit and availability. AFT SOLUTIONS LLC is an independent consulting firm.</p>
+        <p class="note">Partners are engaged based on fit and availability. AFT SOLUTIONS LLC is an independent consulting firm.</p>
       </div>
     </section>
 
-    <section id="contact" class="section alt">
+    <section id="contact" class="section">
       <div class="container contact-grid">
         <div>
           <h2>Contact</h2>
-          <p>Ready to get started? Tell us about your goals and we’ll follow up to schedule a consultation.</p>
+          <p>Prefer a quick message? Use this simple form—we’ll follow up to schedule a consultation.</p>
 
           <form class="contact-form" method="post" action="https://formspree.io/f/your-id">
-            <label>
-              Full Name
-              <input type="text" name="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required>
-            </label>
-            <label>
-              Phone
-              <input type="tel" name="phone" placeholder="Optional">
-            </label>
-            <label>
-              How can we help?
-              <textarea name="message" rows="5" required></textarea>
-            </label>
+            <label>Full Name<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Phone<input type="tel" name="phone" placeholder="Optional"></label>
+            <label>How can we help?<textarea name="message" rows="5" required></textarea></label>
             <button class="btn primary" type="submit">Send Message</button>
-            <p class="tiny">Prefer email? <a href="mailto:info@aftsolutionsllc.com">info@aftsolutionsllc.com</a></p>
+            <p class="tiny">Or email <a href="mailto:info@aftsolutionsllc.com">info@aftsolutionsllc.com</a></p>
           </form>
         </div>
 
         <div class="contact-card">
           <h3>AFT SOLUTIONS LLC</h3>
-          <p>
-            3355 Pio Nono Ave, Ste 4<br />
-            Macon, GA 31206
-          </p>
+          <p>3355 Pio Nono Ave, Ste 4<br/>Macon, GA 31206</p>
           <p><strong>Hours:</strong> By appointment</p>
           <div class="map-wrap">
-            <iframe
-              title="AFT SOLUTIONS LLC Location"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=3355%20Pio%20Nono%20Ave%20Ste%204%2C%20Macon%2C%20GA%2031206&output=embed">
-            </iframe>
+            <iframe title="AFT SOLUTIONS LLC Location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3355%20Pio%20Nono%20Ave%20Ste%204%2C%20Macon%2C%20GA%2031206&output=embed"></iframe>
           </div>
         </div>
       </div>
@@ -246,6 +423,8 @@
       <nav class="footer-nav" aria-label="Footer">
         <a href="#snowapp">SnowApp</a>
         <a href="#services">Services</a>
+        <a href="#signup">Sign Up</a>
+        <a href="#investors">Investors</a>
         <a href="#about">About</a>
         <a href="#credentials">Credentials</a>
         <a href="#contact">Contact</a>
@@ -254,7 +433,6 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.site-nav');
     toggle.addEventListener('click', () => {
@@ -262,8 +440,7 @@
       toggle.setAttribute('aria-expanded', String(!open));
       nav.classList.toggle('open');
     });
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-  </html>
+                                            </html>
