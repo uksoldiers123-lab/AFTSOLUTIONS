@@ -10,19 +10,6 @@
   <!-- Favicon (inline AFT icon) -->
   <link rel="icon" type="image/svg+xml"
     href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E27A"/><stop offset="0.5" stop-color="#E7C75F"/><stop offset="1" stop-color="#CFA64E"/></linearGradient></defs><rect x="10" y="10" width="180" height="180" rx="36" fill="%230B0B0B"/><text x="100" y="128" font-family="Inter,Arial,Helvetica,sans-serif" font-size="96" font-weight="800" letter-spacing="2" text-anchor="middle" fill="url(%23g)">AFT</text></svg>' />
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FinancialService",
-    "name":"AFT SOLUTIONS LLC",
-    "address":{"@type":"PostalAddress","streetAddress":"3355 Pio Nono Ave Ste 4","addressLocality":"Macon","addressRegion":"GA","postalCode":"31206","addressCountry":"US"},
-    "email":"support@aftsolutionsllc.com",
-    "url":"https://www.aftsolutionsllc.com/",
-    "foundingDate":"2006"
-  }
-  </script>
 </head>
 <body>
   <!-- Header -->
@@ -53,25 +40,66 @@
   </header>
 
   <main id="home">
-    <!-- Hero -->
+    <!-- Hero (uses only website grab real image) -->
     <section class="hero">
-      <img class="hero-silk" src="images/silk-gold.jpg" alt="" aria-hidden="true" />
-
       <div class="container hero-inner">
         <h1>Financial guidance to <span class="glow">financial freedom</span>.</h1>
         <p>Since 2006, AFT SOLUTIONS LLC has prepared clients to be fundable—grant-ready plans, strong credit strategy, and a lender network that opens doors.</p>
+
         <div class="hero-cta">
           <a class="btn primary" href="#signup">Start a Project</a>
           <a class="btn ghost" href="#services">Explore Services</a>
         </div>
 
-        <!-- SnowApp phone mockups using your screenshots -->
-        <div class="hero-mock phone-stack">
-          <div class="phone"><img src="images/snowapp-dashboard-1.jpg" alt="SnowApp dashboard" /></div>
-          <div class="phone"><img src="images/snowapp-transfers.jpg" alt="Send & request screen" /></div>
-          <div class="phone"><img src="images/snowapp-affiliate.jpg" alt="Affiliate tier screen" /></div>
+        <!-- Website preview (real image) -->
+        <figure class="website-preview">
+          <img src="images/website-grab.jpg" alt="AFT Solutions website preview" />
+        </figure>
+
+        <!-- Phone stack: first = real dashboard, others = coded placeholders -->
+        <div class="phone-stack">
+          <div class="phone"><img src="images/snowapp-dashboard.jpg" alt="SnowApp dashboard" /></div>
+
+          <!-- Coded image: Transfers -->
+          <div class="phone coded">
+            <svg viewBox="0 0 390 844" xmlns="http://www.w3.org/2000/svg" aria-label="SnowApp Transfers mock">
+              <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#a3e635"/><stop offset="1" stop-color="#38bdf8"/>
+                </linearGradient>
+              </defs>
+              <rect width="390" height="844" rx="28" fill="#0f172a"/>
+              <rect x="20" y="40" width="350" height="120" rx="20" fill="url(#g)" opacity="0.9"/>
+              <rect x="20" y="200" width="350" height="70" rx="14" fill="#0ea5e9" opacity="0.15"/>
+              <rect x="20" y="290" width="350" height="70" rx="14" fill="#22c55e" opacity="0.15"/>
+              <rect x="20" y="380" width="350" height="160" rx="18" fill="#0b1324" stroke="#1f2937"/>
+              <text x="32" y="424" fill="#94a3b8" font-family="Inter,system-ui" font-size="18">$ 5.00</text>
+              <rect x="20" y="560" width="350" height="70" rx="16" fill="url(#g)"/>
+              <text x="115" y="602" fill="#052e16" font-family="Inter,system-ui" font-weight="700" font-size="20">Send $5.00 →</text>
+            </svg>
+          </div>
+
+          <!-- Coded image: Affiliate -->
+          <div class="phone coded">
+            <svg viewBox="0 0 390 844" xmlns="http://www.w3.org/2000/svg" aria-label="SnowApp Affiliate mock">
+              <defs>
+                <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0b1324"/>
+                </linearGradient>
+              </defs>
+              <rect width="390" height="844" rx="28" fill="#0b1324"/>
+              <rect x="20" y="40" width="350" height="120" rx="20" fill="url(#b)" opacity="0.9"/>
+              <text x="36" y="98" fill="#e0f2fe" font-family="Inter,system-ui" font-weight="800" font-size="36">Tiered Affiliate</text>
+              <rect x="20" y="200" width="350" height="84" rx="18" fill="#e5f5ff" opacity=".7"/>
+              <text x="40" y="248" fill="#0f172a" font-family="Inter,system-ui" font-weight="700" font-size="22">Tier 1: 5% (0–9)</text>
+              <rect x="20" y="300" width="350" height="84" rx="18" fill="#d1fae5" opacity=".7"/>
+              <text x="40" y="348" fill="#052e16" font-family="Inter,system-ui" font-weight="700" font-size="22">Tier 2: 7.5% (10–49)</text>
+              <rect x="20" y="400" width="350" height="84" rx="18" fill="#fef9c3" opacity=".7"/>
+              <text x="40" y="448" fill="#3f3f0e" font-family="Inter,system-ui" font-weight="700" font-size="22">Tier 3: 10% (50+)</text>
+            </svg>
+          </div>
         </div>
-        <p class="tiny">Interface previews only. Sensitive product details remain confidential.</p>
+        <p class="tiny">Interface previews include one real screen; others are stylized representations coded in for privacy.</p>
       </div>
     </section>
 
@@ -89,12 +117,13 @@
           </ul>
           <div class="product-cta">
             <a class="btn primary" href="https://snowapp.net" target="_blank" rel="noopener">Visit SnowApp.net</a>
-            <a class="btn outline" href="#snowapp-gallery">View Screens</a>
+            <a class="btn outline" href="#snowapp-gallery">View Previews</a>
           </div>
         </div>
 
         <div class="product-card">
           <a class="icon-link" href="https://snowapp.net" target="_blank" rel="noopener" aria-label="Open SnowApp.net">
+            <!-- coded SnowApp icon -->
             <svg class="app-icon" viewBox="0 0 200 200" role="img" aria-label="SnowApp icon">
               <defs><linearGradient id="snowgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a3e635"/><stop offset="50%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient></defs>
               <rect x="4" y="4" width="192" height="192" rx="24" fill="white"/>
@@ -104,37 +133,57 @@
               </g>
             </svg>
           </a>
-          <div id="snowapp-video" class="video-embed">
-            <iframe title="SnowApp Promo" src="https://www.youtube.com/embed/VIDEO_ID" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="video-embed">
+            <!-- Placeholder video frame coded; swap src later -->
+            <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Promo video placeholder" class="svg-video">
+              <defs><linearGradient id="v" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1324"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
+              <rect width="1280" height="720" rx="16" fill="url(#v)"/>
+              <circle cx="640" cy="360" r="66" fill="#fff" opacity=".92"/>
+              <polygon points="620,320 700,360 620,400" fill="#0b1324"/>
+            </svg>
           </div>
           <p class="tiny center made-by">Made by <strong>AFT SOLUTIONS LLC</strong></p>
         </div>
       </div>
     </section>
 
-    <!-- Screenshot gallery using your images -->
+    <!-- Preview gallery (first tile real; others coded) -->
     <section id="snowapp-gallery" class="section">
       <div class="container">
         <h2>Interface Previews</h2>
-        <p class="section-lead">A few screens to showcase the look & polish—technical details remain private.</p>
+        <p class="section-lead">Real dashboard + coded mock tiles that explain the rest without exposing private UI.</p>
 
         <div class="ui-gallery">
-          <figure class="ui-frame"><img src="images/snowapp-dashboard-0.jpg" alt="Dashboard card" /></figure>
-          <figure class="ui-frame"><img src="images/snowapp-history.jpg" alt="Recent transactions" /></figure>
-          <figure class="ui-frame"><img src="images/snowapp-linked-banks.jpg" alt="Linked banks & security" /></figure>
-          <figure class="ui-frame"><img src="images/snowapp-profile.jpg" alt="Profile settings" /></figure>
-          <figure class="ui-frame"><img src="images/snowapp-tagnames.jpg" alt="Business tagnames" /></figure>
-          <figure class="ui-frame"><img src="images/snowapp-affiliate.jpg" alt="Tiered affiliate program" /></figure>
+          <figure class="ui-frame"><img src="images/snowapp-dashboard.jpg" alt="Dashboard screen" /></figure>
+
+          <figure class="ui-frame ph ph-history" aria-label="Transactions mock">
+            <figcaption>Transactions timeline with filters and details</figcaption>
+          </figure>
+
+          <figure class="ui-frame ph ph-linked" aria-label="Linked banks mock">
+            <figcaption>Secure bank linking via Stripe Financial Connections</figcaption>
+          </figure>
+
+          <figure class="ui-frame ph ph-profile" aria-label="Profile mock">
+            <figcaption>Profile, security, and username settings</figcaption>
+          </figure>
+
+          <figure class="ui-frame ph ph-send" aria-label="Transfers mock">
+            <figcaption>Send/request with tagname, note, amount</figcaption>
+          </figure>
+
+          <figure class="ui-frame ph ph-aff" aria-label="Affiliate mock">
+            <figcaption>Tiered affiliate earnings & monthly payout</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Services (unchanged from your previous) -->
+    <!-- Services / Investors / About / Contact (brief) -->
     <section id="services" class="section">
       <div class="container">
         <h2>What we do</h2>
         <p class="section-lead">Fundable strategy, documentation, and capital readiness—refined over 19+ years.</p>
-
         <div class="grid cards">
           <article class="card"><div class="icon i-quill"></div><h3>Grant Writing</h3><p>Research, narrative, budgets, compliance, and submission support.</p></article>
           <article class="card"><div class="icon i-brief"></div><h3>Business Plans</h3><p>Lender/investor-ready plans with market insight & financial modeling.</p></article>
@@ -148,63 +197,38 @@
       </div>
     </section>
 
-    <!-- Sign-Up (keep your existing Supabase form) -->
-    <section id="signup" class="section alt">
-      <!-- keep your previous intake form + script -->
-    </section>
-
-    <!-- Investors (ASK updated) -->
     <section id="investors" class="section">
       <div class="container">
         <h2>Investors</h2>
         <p class="section-lead">We build productized services and SnowApp to move clients toward financial freedom.</p>
-
         <div class="grid inv-grid">
           <article class="card"><h3>Problem</h3><p>Small businesses and creators struggle to become “fundable”.</p></article>
           <article class="card"><h3>Solution</h3><p>Capital-readiness services + tools, including SnowApp.</p></article>
-          <article class="card"><h3>Products</h3><ul><li>SnowApp (snowapp.net)</li><li>Consulting Programs</li><li>Templates & Tooling</li></ul></article>
-          <article class="card"><h3>Business Model</h3><ul><li>Service fees</li><li>Packages & subscriptions</li><li>Affiliate revenue</li></ul></article>
-          <article class="card"><h3>Traction</h3><ul><li>19+ years operating</li><li>Referral-driven pipeline</li><li>SnowApp launch</li></ul></article>
-          <article class="card"><h3>Go-to-Market</h3><ul><li>Referrals & partners</li><li>Workshops</li><li>Waitlist</li></ul></article>
-          <article class="card"><h3>Moat</h3><ul><li>Playbooks</li><li>Lender network</li><li>Trust + speed</li></ul></article>
-          <article class="card"><h3>Roadmap (12 months)</h3><ol><li>Productized tiers</li><li>SnowApp rollout</li><li>Partner marketplace</li></ol></article>
-        </div>
-
-        <div class="grid inv-ask">
-          <article class="card">
-            <h3>The Ask</h3>
-            <p>Seeking approximately <strong>$500,000</strong> to accelerate SnowApp and productization. Accepting partial participation with flexible structures: ROI-based revenue share, equity, or shares via SAFE/convertible.</p>
-          </article>
-          <article class="card">
-            <h3>Use of Funds</h3>
-            <table class="usefunds"><thead><tr><th>Category</th><th>Allocation</th></tr></thead>
-              <tbody>
-                <tr><td>SnowApp marketing & onboarding</td><td>30%</td></tr>
-                <tr><td>Productized service build-out</td><td>25%</td></tr>
-                <tr><td>Compliance & integrations</td><td>15%</td></tr>
-                <tr><td>Talent & specialists</td><td>20%</td></tr>
-                <tr><td>Ops reserve</td><td>10%</td></tr>
-              </tbody>
-            </table>
-          </article>
           <article class="card"><h3>Model Snapshot</h3><ul><li>$1.5k–$7.5k packages</li><li>$29–$149/mo subscriptions</li><li>5–15% affiliate take</li></ul><p class="tiny">Illustrative.</p></article>
-          <article class="card"><h3>FAQ</h3>
-            <details><summary>Is AFT a bank?</summary><p>No—AFT SOLUTIONS LLC is an independent consulting firm.</p></details>
-            <details><summary>SnowApp stage?</summary><p>Promo & partner alignment; staged rollout.</p></details>
-            <details><summary>Updates?</summary><p>Quarterly email updates + KPI dashboard.</p></details>
-          </article>
-        </div>
-
-        <div class="inv-cta">
-          <a class="btn primary" href="mailto:support@aftsolutionsllc.com?subject=Investor%20Inquiry%20%E2%80%94%20AFT%20SOLUTIONS">Request Investor Overview</a>
-          <a class="btn ghost" href="#contact">Talk with the team</a>
+          <article class="card"><h3>Roadmap (12 months)</h3><ol><li>Productized tiers</li><li>SnowApp rollout</li><li>Partner marketplace</li></ol></article>
         </div>
       </div>
     </section>
 
-    <!-- About / Credentials / Contact (keep your previous blocks) -->
-    <section id="about" class="section"><div class="container"><h2>About AFT SOLUTIONS LLC</h2><p><strong>19+ years of experience.</strong> Founded in 2006, we help organizations craft fundable plans, build credit, and secure resources.</p></div></section>
-    <section id="credentials" class="section alt"><div class="container"><h2>Credentials & Partners</h2><p class="note">Partners are engaged based on fit and availability. AFT SOLUTIONS LLC is an independent consulting firm.</p></div></section>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About AFT SOLUTIONS LLC</h2>
+        <p><strong>19+ years of experience.</strong> Founded in 2006, we help organizations craft fundable plans, build credit, and secure resources.</p>
+      </div>
+    </section>
+
+    <section id="credentials" class="section alt">
+      <div class="container">
+        <h2>Credentials & Partners</h2>
+        <div class="pill-row">
+          <span class="pill">Lender Network</span><span class="pill">Grant Portals</span>
+          <span class="pill">Credit Doctors</span><span class="pill">Tax Preparers</span>
+          <span class="pill">Web & Brand Team</span><span class="pill">Financial Analysts</span>
+        </div>
+        <p class="note">Partners are engaged based on fit and availability. AFT SOLUTIONS LLC is an independent consulting firm.</p>
+      </div>
+    </section>
+
     <section id="contact" class="section">
       <div class="container contact-grid">
         <div>
@@ -243,7 +267,10 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // mobile nav + year
+    const toggle=document.querySelector('.nav-toggle');const nav=document.querySelector('.site-nav');
+    toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open')});
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
-</html>
+  </html>
