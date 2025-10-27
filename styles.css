@@ -1,4 +1,3 @@
-/* ---------- Premium theme: off-white paper, deep black, soft gold accents ---------- */
 :root{
   --paper:#f7f3ea; --paper-2:#f2ede3;
   --ink:#0b0b0b; --muted:#4b5563;
@@ -35,19 +34,26 @@ body{
 /* Hero */
 .hero{
   position:relative; isolation:isolate;
-  padding:60px 0 88px;
+  padding:72px 0 88px;
   background:
     radial-gradient(1200px 400px at 20% -10%, rgba(207,166,78,.18), transparent 60%),
     linear-gradient(180deg, #121212 0%, #0c0c0c 60%, #121212 100%);
   color:#fff;
 }
-.hero-silk{object-fit:cover; object-position:center; height:320px; width:100%; display:block; opacity:.22; mix-blend-mode:screen}
 .hero-inner{max-width:960px}
 .hero h1{font-size:clamp(2.2rem,4.2vw,3.4rem);line-height:1.12;margin:.2rem 0 .7rem}
 .hero .glow{background:linear-gradient(135deg,var(--gold-1),var(--gold-3));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{color:#e7e7e7;max-width:65ch}
 .hero-cta{margin-top:1.25rem;display:flex;gap:.75rem;flex-wrap:wrap}
 
+.website-preview{
+  margin:20px 0 8px; border-radius:16px; overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}
+.website-preview img{display:block;width:100%;height:320px;object-fit:cover;object-position:center}
+
+/* Buttons */
 .btn{display:inline-block;padding:.95rem 1.2rem;border-radius:14px;font-weight:900;text-decoration:none;cursor:pointer;border:1px solid transparent}
 .btn.primary{background:var(--btn-bg);color:var(--btn-fg)}
 .hero .btn.primary{background:linear-gradient(135deg,#101010,#1a1a1a);border-color:#262626}
@@ -97,17 +103,14 @@ body{
 .icon-link{display:grid;place-items:center;margin-bottom:12px}
 .app-icon{width:120px;height:120px;border-radius:24px;display:block;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#b79a32,#e8d17a 40%,#b79a32) border-box;box-shadow:0 10px 28px rgba(0,0,0,.08);overflow:hidden}
 .video-embed{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#f3eee5}
-.video-embed iframe{width:100%;height:100%;border:0;display:block}
+.svg-video{display:block;width:100%;height:100%}
 
-/* About & credentials */
-.about-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
-@media (max-width:900px){.about-wrap{grid-template-columns:1fr}}
-.checks{list-style:none;padding:0;margin:.75rem 0 0}
-.checks li{margin:.36rem 0;padding-left:1.4rem;position:relative}
-.checks li::before{content:"✓";position:absolute;left:0;top:0;color:#b69538;font-weight:900}
+/* About / Credentials */
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+.pill{border:1px solid var(--border);padding:.45rem .7rem;border-radius:999px;background:#fff;color:var(--ink);font-weight:700}
 .note{color:var(--muted);margin-top:12px}
 
-/* Intake & contact (basic) */
+/* Contact */
 .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
 .contact-form{display:grid;gap:12px;margin-top:.5rem}
@@ -134,12 +137,12 @@ body{
   .site-nav a:last-child{border-bottom:0}
 }
 
-/* ---- SnowApp phone mockups & gallery ---- */
+/* ---- Phone mockups ---- */
 .phone-stack{
   display:grid;
   grid-template-columns:repeat(3, minmax(0, 1fr));
   gap:14px;
-  margin-top:22px;
+  margin-top:18px;
 }
 @media (max-width:900px){ .phone-stack{grid-template-columns:1fr 1fr} }
 @media (max-width:640px){ .phone-stack{grid-template-columns:1fr} }
@@ -159,25 +162,25 @@ body{
   box-shadow: inset 0 0 0 2px rgba(255,255,255,.05);
   pointer-events:none;
 }
-.phone img{
-  width:100%; height:100%; object-fit:cover;
-  object-position:center top;
-  border-radius:18px; display:block;
-}
+.phone img{width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:18px; display:block}
+.phone.coded svg{width:100%; height:100%; display:block}
 
-/* Gallery tiles */
-.ui-gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
+/* ---- Coded gallery tiles ---- */
+.ui-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 @media (max-width:1024px){ .ui-gallery{grid-template-columns:repeat(2,1fr)} }
 @media (max-width:640px){ .ui-gallery{grid-template-columns:1fr} }
 
-.ui-frame{
-  background:#fff; border:1px solid var(--border);
-  border-radius:14px; overflow:hidden; box-shadow: var(--shadow);
-}
-.ui-frame img{
-  width:100%; height:260px; object-fit:cover; object-position:center top; display:block;
-}
+.ui-frame{background:#fff; border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow: var(--shadow); position:relative}
+.ui-frame img{width:100%; height:260px; object-fit:cover; object-position:center top; display:block}
+.ui-frame figcaption{position:absolute; left:12px; bottom:10px; right:12px; background:rgba(0,0,0,.55); color:#fff; font-weight:700; font-size:.9rem; padding:6px 10px; border-radius:10px}
+
+/* placeholders (coded, no images) */
+.ph{height:260px; background:linear-gradient(135deg,#0b1324,#0ea5e9)}
+.ph::before{content:""; position:absolute; inset:0; opacity:.2; background:
+  radial-gradient(400px 160px at 20% -10%, #a3e635, transparent 60%),
+  radial-gradient(400px 160px at 80% 110%, #38bdf8, transparent 60%)}
+.ph-history{background:linear-gradient(135deg,#0ea5e9,#0b1324)}
+.ph-linked{background:linear-gradient(135deg,#0b1324,#38bdf8)}
+.ph-profile{background:linear-gradient(135deg,#38bdf8,#a3e635)}
+.ph-send{background:linear-gradient(135deg,#a3e635,#22d3ee)}
+.ph-aff{background:linear-gradient(135deg,#0ea5e9,#0b1324)}
