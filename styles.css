@@ -12,18 +12,17 @@ body {
 header.site-header {
   background: #111;
   padding: 12px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   border-bottom: 1px solid #222;
 }
 .brand-text {
   font-weight: 800;
   color: #f6e27a;
-  display: block;
-  margin-bottom: 8px;
 }
 .site-nav a {
   color: #eee;
-  margin: 0 12px;
+  margin-left: 20px;
   text-decoration: none;
 }
 .hero {
@@ -54,7 +53,7 @@ header.site-header {
 /* --- PHONE MOCKS --- */
 .phone-stack {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   margin-top: 40px;
 }
@@ -115,29 +114,14 @@ header.site-header {
 .ui-dashboard .nav .i {width: 26px;height: 26px;border-radius: 10px;background: #ffffff22;}
 .ui-dashboard .nav .i.active {background: linear-gradient(135deg,#a3e635,#22d3ee,#38bdf8);}
 
-/* SEND FUNDS MOCK */
-.ui-send {padding: 14px;background: linear-gradient(180deg,#0b1324 0%,#06233c 100%);}
-.ui-send .send-header {color:#22d3ee;font-weight:700;text-align:center;margin-bottom:8px;}
-.ui-send .toggle {display:flex;gap:8px;margin-bottom:10px;}
-.ui-send .tab {flex:1;padding:8px;border-radius:8px;background:#ffffff14;text-align:center;}
-.ui-send .tab.active {background:linear-gradient(135deg,#a3e635,#22d3ee,#38bdf8);color:#000;font-weight:800;}
-.ui-send .field {margin:10px 0;text-align:left;}
-.ui-send label {display:block;font-size:12px;color:#ccc;margin-bottom:4px;}
-.ui-send .input {padding:10px;border-radius:8px;background:#ffffff10;border:1px solid #ffffff20;}
-.ui-send .input.light {color:#666;}
-.ui-send .send-btn {margin-top:14px;padding:12px;border-radius:12px;background:linear-gradient(135deg,#a3e635,#22d3ee,#38bdf8);text-align:center;color:#000;font-weight:800;}
-.ui-send .nav {position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:space-evenly;}
-.ui-send .nav .i {width:26px;height:26px;border-radius:10px;background:#ffffff22;}
-.ui-send .nav .i.active {background:linear-gradient(135deg,#a3e635,#22d3ee,#38bdf8);}
-
 /* AFFILIATE MOCK */
-.ui-affiliate {padding:14px;background: radial-gradient(80% 60% at 10% 0%,#0b1a2b,transparent), radial-gradient(120% 60% at 100% 0%,#06172a,transparent), #0b1324;color:#cfeffb;}
-.ui-affiliate .title {font-weight:900;font-size:18px;margin-bottom:8px;}
-.ui-affiliate .tiers {display:flex;gap:8px;margin-bottom:8px;}
-.ui-affiliate .t {flex:1;height:48px;border-radius:12px;display:grid;place-items:center;font-weight:900;border:1px solid #ffffff20;}
-.ui-affiliate .t1 {background:#a3e63522;}
-.ui-affiliate .t2 {background:#22d3ee22;}
-.ui-affiliate .t3 {background:#38bdf822;}
+.ui-affiliate {padding: 14px;background: radial-gradient(80% 60% at 10% 0%,#0b1a2b,transparent), radial-gradient(120% 60% at 100% 0%,#06172a,transparent), #0b1324;color:#cfeffb;}
+.ui-affiliate .title {font-weight: 900;font-size: 18px;margin-bottom: 8px;}
+.ui-affiliate .tiers {display: flex;gap: 8px;margin-bottom: 8px;}
+.ui-affiliate .t {flex: 1;height: 48px;border-radius: 12px;display: grid;place-items: center;font-weight: 900;border: 1px solid #ffffff20;}
+.ui-affiliate .t1 {background: #a3e63522;}
+.ui-affiliate .t2 {background: #22d3ee22;}
+.ui-affiliate .t3 {background: #38bdf822;}
 
 /* FOOTER */
-.site-footer {text-align:center;padding:20px 0;background:#111;border-top:1px solid #222;}
+.site-footer {text-align: center;padding: 20px 0;background: #111;border-top: 1px solid #222;}
