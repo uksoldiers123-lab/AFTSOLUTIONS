@@ -4,72 +4,73 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AFT Solutions LLC — Financial & Web Services</title>
-  <meta name="description" content="AFT Solutions LLC offers expert grant writing, credit building, legal & tax guidance, and premium web & app development. Explore SnowApp and our affiliate opportunities." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="AFT Solutions LLC: grant writing, credit building, legal & tax, and premium web/app. New customer inquiries go straight to our inbox." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="container row">
-      <div class="brand">
-        <div class="logo">AFT</div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">AFT</span>
         <span>AFT Solutions LLC</span>
-      </div>
-      <nav class="menu">
+      </a>
+      <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="badge" href="investors.html">Investors</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="pill-link" href="investment.html">Investment</a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="silk" aria-hidden="true"></div>
     <div class="container hero-inner">
       <h1 class="display">Guiding You to Financial Freedom</h1>
-      <p class="lead">
-        AFT Solutions LLC offers professional <strong>financial consulting</strong>, <strong>credit repair</strong>, <strong>tax and legal support</strong>, and <strong>premium digital solutions</strong> — including our new fintech product <a href="https://snowapp.net" target="_blank" rel="noopener">SnowApp</a>.
-      </p>
-      <a href="#services" class="btn primary">Get Started</a>
+      <p class="lead">Since 2006, AFT Solutions LLC helps clients become fundable—clear plans, credit strategy, compliance, and premium digital execution.</p>
+      <a href="#contact" class="btn primary">Start Your Project</a>
     </div>
   </section>
 
+  <!-- Services -->
   <section id="services" class="section">
     <div class="container">
-      <h2 class="section-title">Our Core Services</h2>
+      <h2 class="section-title">What We Do</h2>
       <div class="cards">
         <article class="card">
           <div class="ico">✍️</div>
           <h3>Grant Writing</h3>
-          <p>Professional grant writing and funding assistance for small businesses and nonprofits.</p>
+          <p>Research, narrative, budgets, and submission support.</p>
         </article>
         <article class="card">
           <div class="ico">💳</div>
           <h3>Credit Building</h3>
-          <p>Improve your credit profile with structured guidance and tailored credit-rebuilding tools.</p>
+          <p>Roadmaps with legal credit specialists to strengthen profiles.</p>
         </article>
         <article class="card">
           <div class="ico">⚖️</div>
-          <h3>Legal & Tax</h3>
-          <p>Business formation, tax preparation, and compliance services built around your growth.</p>
+          <h3>Legal &amp; Tax</h3>
+          <p>Entity setup, compliance basics, and tax preparation.</p>
         </article>
         <article class="card">
           <div class="ico">💼</div>
-          <h3>Web & App Development</h3>
-          <p>Custom, high-end digital products crafted for your brand and business goals.</p>
+          <h3>Web &amp; App</h3>
+          <p>Credible sites & apps that convert and pass diligence checks.</p>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- Product teaser (no secrets) -->
   <section class="section alt">
     <div class="container grid-2">
       <div>
-        <h2 class="section-title gold">Introducing SnowApp</h2>
-        <p>Our flagship fintech wallet lets users send, receive, and spend instantly — while earning lifetime affiliate commissions. Designed for creators, entrepreneurs, and communities who want control of their money.</p>
-        <a href="https://snowapp.net" target="_blank" rel="noopener" class="btn outline">Visit SnowApp</a>
+        <h2 class="section-title gold">SnowApp</h2>
+        <p>A clean, modern wallet experience to send, request, and spend with transparency. (High-level overview only; detailed mechanics available under NDA.)</p>
+        <a class="btn outline" href="https://snowapp.net" target="_blank" rel="noopener">Visit SnowApp</a>
       </div>
       <div class="phone-pair">
         <div class="phone gold dark ui-dashboard">
@@ -84,33 +85,48 @@
           <div class="tab-row">
             <span class="tab active">Send</span><span class="tab">Request</span>
           </div>
-          <div class="field"><span class="lbl">To</span><span class="val">@snowman</span></div>
-          <div class="field"><span class="lbl">Amount</span><span class="val">$5.00</span></div>
-          <div class="btn-send">Send $5.00</div>
+          <div class="field"><span class="lbl">To</span><span class="val">@client</span></div>
+          <div class="field"><span class="lbl">Amount</span><span class="val">$25.00</span></div>
+          <div class="btn-send">Send $25.00</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- Contact (prefilled email, no backend) -->
+  <section id="contact" class="section">
     <div class="container grid-2">
       <div>
-        <h2 class="section-title">Book a Consultation</h2>
-        <form id="consult-form" class="form">
-          <label>Full Name<input required type="text" name="name" placeholder="Your name"></label>
-          <label>Email<input required type="email" name="email" placeholder="you@example.com"></label>
-          <label>Service<select name="service">
-              <option selected>Select a service…</option>
+        <h2 class="section-title">Contact — New Project</h2>
+        <form id="aft-inquiry-form" class="form" novalidate>
+          <label class="field">
+            <span>Name</span>
+            <input id="name" type="text" placeholder="Your name" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input id="email" type="email" placeholder="you@example.com" required />
+          </label>
+          <label class="field">
+            <span>Service</span>
+            <select id="service">
+              <option value="">Select service</option>
               <option>Grant Writing</option>
               <option>Credit Building</option>
-              <option>Legal & Tax</option>
-              <option>Web & App Development</option>
-            </select></label>
-          <label>Message<textarea name="message" rows="4" placeholder="Tell us what you need…"></textarea></label>
-          <button class="btn primary" type="submit">Submit</button>
-          <p id="form-note" style="margin-top:10px;color:#b5ad97"></p>
+              <option>Legal &amp; Tax</option>
+              <option>Web &amp; App</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea id="message" rows="5" placeholder="Tell us what you need…" required></textarea>
+          </label>
+          <button class="btn primary" type="submit">Send Message</button>
+          <p id="inquiry-status" class="muted small"></p>
         </form>
       </div>
+
       <div class="promo-card">
         <div class="promo-phone">
           <div class="screen">
@@ -119,50 +135,44 @@
           </div>
         </div>
         <div class="promo-copy">
-          <h3>Premium Marketing Insights</h3>
-          <p>We craft high-performing campaigns and elegant websites that attract and convert.</p>
+          <h3>Fast response. Clear next steps.</h3>
+          <p class="muted">We follow up by email to scope, timeline, and costs—no fluff.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container foot-wrap">
-      <div>© <span id="year"></span> AFT Solutions LLC — All Rights Reserved</div>
+      <div>© <span id="y"></span> AFT Solutions LLC — All Rights Reserved</div>
       <div class="foot-links">
         <a href="#services">Services</a>
-        <a href="about.html">About</a>
-        <a href="investors.html">Investors</a>
-        <a href="contact.html">Contact</a>
+        <a href="#contact">Contact</a>
+        <a href="investment.html">Investment</a>
       </div>
     </div>
   </footer>
 
+  <!-- Prefilled Email (mailto:) -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const form = document.getElementById('consult-form');
-    const note = document.getElementById('form-note');
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-    form.addEventListener('submit', async e => {
+    document.getElementById('aft-inquiry-form').addEventListener('submit', (e) => {
       e.preventDefault();
-      note.textContent = 'Sending…';
-      const data = Object.fromEntries(new FormData(form).entries());
-      try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        const json = await res.json();
-        if (res.ok) {
-          note.textContent = 'Thank you! We’ll reach out soon.';
-          form.reset();
-        } else {
-          note.textContent = 'Error: ' + (json.error || 'Unable to send.');
-        }
-      } catch {
-        note.textContent = 'Network error. Please try again.';
-      }
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) return;
+
+      const subject = encodeURIComponent(`New AFT Inquiry — ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nService: ${service || '—'}\n\nMessage:\n${message}\n\n— Sent from aftsolutionsllc.com`
+      );
+      window.location.href = `mailto:admin@aftsolutionsllc.com?subject=${subject}&body=${body}`;
+      document.getElementById('inquiry-status').textContent = 'Opening your email app…';
     });
   </script>
 </body>
