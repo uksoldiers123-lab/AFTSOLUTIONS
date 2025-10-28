@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFT Solutions LLC — Investors</title>
+  <meta name="description" content="Invest in AFT Solutions LLC. Learn about SnowApp’s market, program summary, and submit investor interest." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b;           /* deep black */
+      --panel:#121212;        /* card bg */
+      --muted:#b5ad97;        /* warm tan text */
+      --text:#f2efe6;         /* off-white text */
+      --gold:#d8b46a;         /* soft gold */
+      --gold-2:#caa45a;
+      --gold-3:#9b7a3b;
+      --ring: rgba(216,180,106,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--text); background:radial-gradient(1200px 600px at 20% -10%, rgba(216,180,106,.14), transparent 60%),
+                                    radial-gradient(1000px 700px at 100% 30%, rgba(216,180,106,.12), transparent 60%),
+                                    var(--bg);
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;
+    }
+    .silk{
+      position:fixed; inset:0; z-index:-1;
+      background:
+        radial-gradient(1200px 500px at 10% 0%, rgba(216,180,106,.08), transparent 60%),
+        radial-gradient(1000px 800px at 90% 60%, rgba(216,180,106,.08), transparent 60%);
+      filter:saturate(120%);
+    }
+    a{color:var(--gold); text-decoration:none}
+    a:hover{color:var(--gold-2)}
+    .container{max-width:1150px; margin:0 auto; padding:0 20px}
+    .nav{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter:saturate(140%) blur(6px);
+      background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.2) 60%, transparent);
+      border-bottom:1px solid rgba(216,180,106,.08);
+    }
+    .nav .row{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:10px; align-items:center; font-family:"Playfair Display",serif; letter-spacing:.5px}
+    .brand .logo{
+      width:34px;height:34px; border-radius:9px;
+      background:linear-gradient(135deg, var(--gold) 0%, var(--gold-3) 100%);
+      display:grid; place-items:center; color:#111; font-weight:700;
+      box-shadow:0 0 0 1px rgba(255,255,255,.06) inset, 0 6px 24px rgba(0,0,0,.45);
+    }
+    .brand span{font-weight:700; font-size:20px}
+    .menu{display:flex; gap:22px; align-items:center; font-weight:600; color:var(--muted)}
+    .menu a{color:var(--muted)}
+    .btn{
+      appearance:none; border:0; cursor:pointer; font-weight:700; letter-spacing:.2px;
+      padding:12px 18px; border-radius:12px; transition:.2s ease;
+      background:linear-gradient(180deg, var(--gold) 0%, var(--gold-2) 100%); color:#111;
+      box-shadow:0 10px 28px rgba(216,180,106,.22), inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.ghost{
+      background:transparent; color:var(--gold);
+      border:1px solid rgba(216,180,106,.35);
+      box-shadow:none;
+    }
+
+    /* Hero */
+    .hero{padding:68px 0 42px; border-bottom:1px solid rgba(216,180,106,.08)}
+    .kicker{color:var(--gold); font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:12px}
+    h1{
+      font-family:"Playfair Display",serif; font-size:40px; line-height:1.15; margin:.45em 0 .35em;
+      text-shadow:0 8px 40px rgba(216,180,106,.08);
+    }
+    .lead{color:var(--muted); max-width:760px}
+    .hero-actions{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap}
+
+    /* Section blocks */
+    section{padding:56px 0}
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid rgba(216,180,106,.10);
+      border-radius:18px; padding:26px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset, 0 20px 60px rgba(0,0,0,.35);
+    }
+    h2{font-family:"Playfair Display",serif; font-size:28px; margin:0 0 18px}
+    h3{font-size:16px; margin:18px 0 8px; color:var(--gold)}
+    .grid{display:grid; gap:20px}
+    @media (min-width:980px){ .grid.cols-2{grid-template-columns:1.2fr .8fr} }
+    @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    .muted{color:var(--muted)}
+    ul{margin:8px 0 0 20px}
+    li{margin:6px 0}
+
+    /* Cards in Program Summary */
+    .card{background:var(--panel); border:1px solid rgba(216,180,106,.12); border-radius:16px; padding:20px}
+    .card h4{margin:0 0 8px; font-size:15px; color:var(--gold)}
+    .small{font-size:13px}
+
+    /* Form */
+    .form{display:grid; gap:14px}
+    .form label{font-size:14px; color:var(--muted)}
+    .input, select, textarea{
+      width:100%; padding:12px 14px; color:var(--text);
+      background:#0f0f0f; border:1px solid rgba(216,180,106,.15); border-radius:12px;
+      outline:none; transition:border-color .2s;
+    }
+    .input:focus, select:focus, textarea:focus{border-color:var(--gold); box-shadow:0 0 0 4px var(--ring)}
+    .foot{padding:30px 0; border-top:1px solid rgba(216,180,106,.08); color:var(--muted); font-size:14px}
+    .tag{display:inline-grid; place-items:center; width:22px; height:22px; border-radius:6px;
+      background:linear-gradient(135deg, var(--gold), var(--gold-3)); color:#111; font-weight:800; font-size:12px; margin-right:8px}
+    .badge{display:inline-flex; gap:8px; align-items:center; font-weight:700; color:#111; padding:10px 14px; border-radius:12px;
+      background:linear-gradient(135deg, var(--gold), var(--gold-2)); box-shadow:0 10px 28px rgba(216,180,106,.25)}
+  </style>
+</head>
+<body>
+  <div class="silk" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container row">
+      <div class="brand">
+        <div class="logo">AFT</div>
+        <span>AFT Solutions LLC</span>
+      </div>
+      <nav class="menu">
+        <a href="/">What We Do</a>
+        <a href="/products">Our Products</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+        <a class="badge" href="/investors">Investors</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="kicker">Invest with Confidence</div>
+      <h1>Invest in the Future with AFT Solutions LLC</h1>
+      <p class="lead">
+        We’re an early-stage studio building a connected ecosystem across fintech, social, and gaming — with
+        <strong>SnowApp</strong> as our flagship wallet product.
+      </p>
+      <div class="hero-actions">
+        <a href="#overview" class="btn">View Investment Overview</a>
+        <a href="#contact" class="btn ghost">Submit Investment Interest</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="container grid cols-2">
+      <div class="panel">
+        <h2>SnowApp — Investment Overview</h2>
+
+        <h3>The Problem</h3>
+        <p class="muted">
+          Money apps are fragmented and expensive. Wallets, loyalty points, and game balances don’t interoperate.
+          Fees stack up and value gets trapped.
+        </p>
+
+        <h3>The Solution</h3>
+        <p class="muted">
+          SnowApp provides a unified wallet: users load USD, transfer peer-to-peer, spend via virtual/physical card,
+          and withdraw to their bank — all with transparent pricing.
+        </p>
+
+        <h3>How It Works</h3>
+        <ul class="muted">
+          <li>Users add money by card or bank link.</li>
+          <li>Card spend settles in USD at authorization.</li>
+          <li>Peer-to-peer runs on the internal ledger for speed and lower cost.</li>
+          <li>Partner balances can convert back to USD on withdrawal.</li>
+        </ul>
+
+        <h3>User Plans</h3>
+        <ul class="muted">
+          <li><strong>Tier 1 (Free):</strong> Basic account and starter affiliate cap.</li>
+          <li><strong>Tier 2:</strong> Paid plan enabling higher limits and caps.</li>
+          <li><strong>Tier 3:</strong> Top tier with highest caps and faster payouts.</li>
+        </ul>
+
+        <h3>Market &amp; Ask</h3>
+        <p class="muted">
+          U.S. P2P ≈ $1.4T (2025); Global mobile gaming ≈ $111B (2024); Neobank revenue ≈ $5.2B (2025).
+          We’re raising <strong>$500k pre-seed</strong> to launch MVP and onboard 10k users.
+        </p>
+
+        <p class="small muted">
+          <em>Note:</em> Our connectional ecosystem and internal mechanisms are trade secrets. Details available under NDA.
+        </p>
+      </div>
+
+      <!-- Right panel could hold a decorative mock image; we’ll use a gold gradient frame -->
+      <div class="panel" style="display:grid;place-items:center;min-height:420px">
+        <div style="width:100%; aspect-ratio: 4/5; border-radius:18px; border:1px solid rgba(216,180,106,.18);
+                    background:linear-gradient(135deg, rgba(216,180,106,.20), rgba(216,180,106,.04));
+                    box-shadow:inset 0 0 0 1px rgba(255,255,255,.04), 0 30px 80px rgba(0,0,0,.45);
+                    display:grid; place-items:center; color:var(--muted); text-align:center; padding:18px">
+          <div>
+            <div class="kicker" style="margin-bottom:8px">SnowApp</div>
+            <div style="font-family:'Playfair Display',serif; font-size:22px; margin-bottom:8px">Investor Snapshot</div>
+            <p class="muted small">Designed placeholder (no upload needed). Replace with product shot later if desired.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM SUMMARY -->
+  <section>
+    <div class="container">
+      <h2>Program Summary (Current)</h2>
+      <div class="grid cols-3" style="margin-top:14px">
+        <div class="card">
+          <h4>Fees</h4>
+          <ul class="muted small">
+            <li><strong>Load:</strong> 4.5% per transaction (min $1.50)</li>
+            <li><strong>Withdrawal:</strong> 1.0% (min $1.00)</li>
+            <li><strong>Card Reissue:</strong> $5.00</li>
+            <li><strong>Monthly Maintenance:</strong> $0 (base tier)</li>
+          </ul>
+          <p class="small muted" style="margin-top:8px">Transparent pricing; no hidden fees.</p>
+        </div>
+
+        <div class="card">
+          <h4>User Tiers &amp; Affiliate</h4>
+          <ul class="muted small">
+            <li><strong>Tier 1 (Free):</strong> Affiliate cap $500 lifetime</li>
+            <li><strong>Tier 2 ($9.99/mo or $120/yr):</strong> Card access; cap $5,000</li>
+            <li><strong>Tier 3 ($19.99/mo):</strong> Highest limits &amp; priority payouts</li>
+            <li><strong>Affiliate Share:</strong> 5% / 7% / 10% by tier</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Limits &amp; Regions</h4>
+          <ul class="muted small">
+            <li><strong>Verified:</strong> $5,000 daily / $15,000 monthly</li>
+            <li><strong>Unverified (starter):</strong> up to $250 / 30 days P2P; no withdrawals</li>
+            <li><strong>Regions:</strong> U.S. only at launch</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Cards &amp; Balance</h4>
+          <ul class="muted small">
+            <li><strong>Card Types:</strong> Virtual + Physical (Apple Pay / Google Pay)</li>
+            <li><strong>Balance:</strong> USD only</li>
+            <li>Issued via approved banking partners; network rules apply.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTOR FORM -->
+  <section id="contact">
+    <div class="container grid cols-2">
+      <div class="panel">
+        <h2>Investor Contact Form</h2>
+        <form id="invest-form" class="form" autocomplete="on" novalidate>
+          <div>
+            <label>Full Name</label>
+            <input class="input" name="name" type="text" placeholder="Your Name" required />
+          </div>
+          <div>
+            <label>Company / Fund Name <span class="muted">(Optional)</span></label>
+            <input class="input" name="company" type="text" placeholder="Optional" />
+          </div>
+          <div>
+            <label>Email</label>
+            <input class="input" name="email" type="email" placeholder="you@domain.com" required />
+          </div>
+          <div>
+            <label>Investment Interest</label>
+            <select name="service">
+              <option value="" selected>Select</option>
+              <option>Pre-seed ($25k–$100k)</option>
+              <option>Lead pre-seed (~$250k+)</option>
+              <option>Strategic/Partnership</option>
+              <option>Angel (≤ $25k)</option>
+            </select>
+          </div>
+          <div>
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell us about your background or interest in AFT Solutions LLC"></textarea>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center">
+            <button class="btn" type="submit">Submit Investment Interest</button>
+            <span id="note" class="small muted"></span>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Why AFT</h3>
+        <ul class="muted">
+          <li><strong>Focused Thesis:</strong> Unified wallet rails powering fintech, social, and gaming.</li>
+          <li><strong>Capital Efficient:</strong> Practical MVP scope with clear fee-based revenue.</li>
+          <li><strong>Affiliate Flywheel:</strong> Tiered commissions drive organic growth.</li>
+          <li><strong>Compliance-First:</strong> Designed to slot into approved partners and network rules.</li>
+        </ul>
+        <p class="small muted" style="margin-top:12px">Detailed data room available upon request &amp; NDA.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="container">
+      © 2025 AFT Solutions LLC — All Rights Reserved
+    </div>
+  </footer>
+
+  <script>
+    // Submit to the same /api/contact endpoint (emails admin@aftsolutionsllc.com)
+    const form = document.getElementById('invest-form');
+    const note = document.getElementById('note');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      note.textContent = 'Sending…';
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      // Dress up the payload so the email subject is obvious
+      const payload = {
+        name: data.name || '',
+        email: data.email || '',
+        service: `Investor Interest — ${data.service || 'Unspecified'}`,
+        message:
+`Company/Fund: ${data.company || '—'}
+
+${data.message || ''}`
+      };
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const json = await res.json().catch(()=>({}));
+        if (res.ok) {
+          note.textContent = 'Thank you! We’ll be in touch shortly.';
+          form.reset();
+        } else {
+          note.textContent = 'Error: ' + (json.error || 'Unable to send right now.');
+        }
+      } catch (err) {
+        note.textContent = 'Network error. Please try again.';
+      }
+    });
+  </script>
+</body>
+  </html>
