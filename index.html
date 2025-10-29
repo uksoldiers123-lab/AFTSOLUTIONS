@@ -30,13 +30,14 @@
     </a>
 
     <nav class="main-nav" id="nav">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="investment.html">Investors</a>
-      <a class="btn-outline" href="#contact">Get in touch</a>
+      <a href="#services" data-navlink>Services</a>
+      <a href="#about" data-navlink>About</a>
+      <!-- Ensure this goes to investment.html -->
+      <a href="investment.html" data-navlink>Investors</a>
+      <a class="btn-outline" href="#contact" data-navlink>Get in touch</a>
     </nav>
 
-    <!-- Mobile v8 menu button (icon visible on mobile too via .brand above) -->
+    <!-- Mobile v8 menu button -->
     <button class="nav-toggle" aria-label="Open Menu" aria-controls="nav" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -50,7 +51,7 @@
       <p class="lead">Financial consulting, credit building, grant support, legal & tax coordination—and our flagship product, SnowApp.</p>
       <div class="cta-row">
         <a href="#services" class="btn">Our Services</a>
-        <a href="investors.html" class="btn-outline">Investors</a>
+        <a href="investment.html" class="btn-outline">Investors</a>
       </div>
     </div>
   </section>
@@ -83,7 +84,7 @@
     </div>
   </section>
 
-  <!-- Contact (mailto prefill; now includes Phone) -->
+  <!-- Contact (mailto prefill; includes Phone) -->
   <section id="contact" class="section container">
     <h2>Book a Consultation</h2>
     <form id="contactForm" class="form panel">
@@ -130,6 +131,17 @@
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // ✅ Ensure nav links work on mobile and close the menu before navigating
+    document.querySelectorAll('#nav a[data-navlink]').forEach(a => {
+      a.addEventListener('click', () => {
+        if (nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+        // allow normal navigation (including to investment.html)
+      }, {passive: true});
     });
 
     // Mailto prefill (includes phone)
