@@ -1,204 +1,218 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AFT Solutions LLC — Investment</title>
-  <meta name="description" content="AFT Solutions LLC is raising $500k pre-seed (partials accepted). Submit investor interest—emails go directly to our team." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AFT Solutions LLC — Investors</title>
+
+  <!-- Inline favicon -->
+  <link rel="icon" href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0" stop-color="%23f6d477"/><stop offset="1" stop-color="%23cfa340"/></linearGradient></defs>
+      <rect x="8" y="8" rx="48" ry="48" width="240" height="240" fill="%230e0e0f"/>
+      <text x="128" y="162" font-family="Inter,Arial" font-size="128" text-anchor="middle" fill="url(%23g)" font-weight="700">AFT</text>
+    </svg>'/>
+
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .hero.investors{min-height:58vh;background:
+      radial-gradient(1200px 420px at 10% -10%, rgba(255,214,102,.18), transparent 60%),
+      radial-gradient(1000px 500px at 110% 10%, rgba(255,214,102,.16), transparent 60%),
+      linear-gradient(135deg,#0b0b0c 0%, #121214 60%, #0b0b0c 100%);}
+    .hero.investors:after{content:"";position:absolute;inset:-30%;
+      background:radial-gradient(100% 60% at 50% 0%, rgba(255,215,140,.14) 0%, transparent 60%),
+                 conic-gradient(from 180deg at 50% 50%, rgba(255,220,140,.18), rgba(0,0,0,0) 35%);
+      filter:blur(50px);animation:floatSheen 14s ease-in-out infinite alternate;pointer-events:none}
+    @keyframes floatSheen{0%{transform:translate3d(-6%,-4%,0) rotate(0)}100%{transform:translate3d(6%,5%,0) rotate(4deg)}}
+    .device-row{display:grid;gap:20px;grid-template-columns:repeat(12,minmax(0,1fr));align-items:end}
+    .device{grid-column:span 4;background:linear-gradient(180deg,#1a1a1d,#0f0f10);border:1px solid var(--border);
+      border-radius:32px;padding:14px;box-shadow:0 12px 50px rgba(0,0,0,.35), inset 0 0 0 2px rgba(255,230,170,.04);
+      position:relative;aspect-ratio:9/19}
+    .device:before{content:"";width:36%;height:12px;background:#0a0a0b;border-radius:0 0 12px 12px;position:absolute;left:32%;top:10px}
+    .screen{position:absolute;inset:20px;border-radius:24px;overflow:hidden;background:
+        radial-gradient(400px 220px at 0% 0%, rgba(35,208,84,.20), transparent 60%),
+        radial-gradient(400px 220px at 100% 100%, rgba(255,217,122,.24), transparent 60%),
+        linear-gradient(180deg, #121316 0%, #0a0a0b 100%);border:1px solid rgba(255,225,160,.08)}
+    .screen .chip{display:inline-block;padding:6px 10px;margin:14px;border-radius:999px;border:1px solid rgba(255,230,170,.18);
+      background:rgba(255,230,170,.06);color:var(--gold);font-size:12px;letter-spacing:.3px}
+    .screen .cta{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 14px;text-align:center;border-radius:12px;font-weight:700;
+      background:linear-gradient(90deg,#a87b1a,#f1cf77);color:#0b0b0c;border:none}
+    .icon{width:22px;height:22px;display:inline-block;margin-right:8px;vertical-align:-4px;
+      background:linear-gradient(180deg,#ffd97a,#cfa340);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+    .icon-fee{-webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4 7h16M4 12h10M4 17h16' stroke='black' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4 7h16M4 12h10M4 17h16' stroke='black' stroke-width='2' fill='none' stroke-linecap='round'/></svg>")}
+    .icon-tier{-webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4 18h16M6 14h12M8 10h8M10 6h4' stroke='black' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4 18h16M6 14h12M8 10h8M10 6h4' stroke='black' stroke-width='2' fill='none' stroke-linecap='round'/></svg>")}
+    .icon-limit{-webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='9' stroke='black' stroke-width='2' fill='none'/><path d='M12 7v6l4 2' stroke='black' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='9' stroke='black' stroke-width='2' fill='none'/><path d='M12 7v6l4 2' stroke='black' stroke-width='2' fill='none' stroke-linecap='round'/></svg>")}
+    .icon-card{-webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='6' width='18' height='12' rx='2' fill='black'/><rect x='3' y='9' width='18' height='3' fill='white'/></svg>");mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='6' width='18' height='12' rx='2' fill='black'/><rect x='3' y='9' width='18' height='3' fill='white'/></svg>")}
+  </style>
 </head>
 <body>
-  <!-- Header (same as index) -->
-  <header class="navbar">
-    <div class="container nav-wrap">
-      <a href="index.html" class="brand">
-        <span class="brand-badge">AFT</span>
-        <span>AFT Solutions LLC</span>
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#contact">Contact</a>
-        <a class="pill-link active" href="investment.html">Investment</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="AFT Solutions LLC – Home">
+      <svg width="34" height="34" viewBox="0 0 256 256" class="brand-icon" aria-hidden="true">
+        <defs><linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#f6d477"/><stop offset="1" stop-color="#cfa340"/></linearGradient></defs>
+        <rect x="8" y="8" rx="48" ry="48" width="240" height="240" fill="#0e0e0f"/>
+        <text x="128" y="162" font-family="Inter, Arial, sans-serif" font-size="128" text-anchor="middle" fill="url(#gold)" font-weight="700">AFT</text>
+      </svg>
+      <span class="brand-name">AFT Solutions LLC</span>
+    </a>
+
+    <nav class="main-nav" id="nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a class="active" href="investors.html">Investors</a>
+      <a class="btn-outline" href="index.html#contact">Get in touch</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Open Menu" aria-controls="nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- Hero -->
-  <section class="hero-invest">
-    <div class="container">
-      <span class="pill">Investor Overview</span>
-      <h1>Invest in the Future with AFT Solutions</h1>
-      <p class="lede">
-        We’re building a connected ecosystem across finance and digital products. Our flagship, <strong>SnowApp</strong>,
-        focuses on simple, transparent money movement.<br>
-        <em>We’re raising <strong>$500k pre-seed</strong> (partials accepted) to launch MVP and onboard early adopters.</em>
-      </p>
-    </div>
-  </section>
+  <main>
+    <section class="hero investors">
+      <div class="container center">
+        <p class="eyebrow">Investor Relations</p>
+        <h1>Invest in the Future with <span class="grad">AFT Solutions</span></h1>
+        <p class="lead">We’re building a connected ecosystem of fintech, social, and gaming products — starting with SnowApp.</p>
+        <div class="cta-row">
+          <a href="#overview" class="btn">View Overview</a>
+          <a href="#contact" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Overview -->
-  <section class="section">
-    <div class="container grid-2">
-      <div class="panel pad">
-        <h2 class="section-title">SnowApp — Investment Overview</h2>
-
+    <section id="overview" class="section container">
+      <h2>SnowApp — Investment Overview</h2>
+      <div class="panel">
         <h3>The Problem</h3>
-        <p class="muted">Money apps are fragmented and expensive. Wallets, loyalty points, and balances don’t interoperate; fees stack up and value gets trapped.</p>
-
-        <h3 style="margin-top:14px;">The Solution</h3>
-        <p class="muted">SnowApp provides a unified wallet experience: users load USD, transfer peer-to-peer, spend by virtual/physical card, and withdraw to bank—transparent pricing.</p>
-
-        <h3 style="margin-top:14px;">How It Works</h3>
-        <ul class="muted">
-          <li>Add money by card or secure bank link.</li>
-          <li>Card spend settles in USD at authorization.</li>
-          <li>P2P activity runs on an internal ledger for speed/cost.</li>
-          <li>Partner balances can convert back to USD on withdrawal.</li>
-        </ul>
-
-        <h3 style="margin-top:14px;">User Plans</h3>
-        <ul class="muted">
-          <li><strong>Tier 1 (Free):</strong> Basic account + starter affiliate cap.</li>
-          <li><strong>Tier 2:</strong> Paid plan with higher limits/caps.</li>
+        <p>Money apps are fragmented and expensive. Wallets, loyalty points, and game balances don’t interoperate. Fees stack up and value gets trapped.</p>
+        <h3>The Solution</h3>
+        <p>SnowApp unifies the wallet experience: load USD, P2P transfers, card spend, and bank withdrawals — with transparent pricing.</p>
+        <h3>How It Works</h3>
+        <p>Funds by card/bank link. Card spend settles in USD at auth. P2P on internal ledger. Partner balances convert to USD on withdrawal.</p>
+        <h3>User Plans</h3>
+        <ul class="bullets">
+          <li><strong>Tier 1 (Free):</strong> Basic account and starter affiliate cap.</li>
+          <li><strong>Tier 2:</strong> Paid plan with higher limits and caps.</li>
           <li><strong>Tier 3:</strong> Highest limits and faster payouts.</li>
         </ul>
-
-        <p class="tiny note">Note: Connectional ecosystem details are trade secrets; deeper materials under NDA.</p>
+        <h3>Market &amp; Ask</h3>
+        <p>U.S. P2P ≈ $1.4T (2025); Mobile gaming ≈ $111B (2024); Neobank revenue ≈ $5.2B (2025). Raising <strong>$500k pre-seed</strong> for MVP &amp; first 10k users.</p>
+        <p class="muted"><em>Note:</em> Connectional ecosystem & mechanisms are trade secrets (NDA for details).</p>
       </div>
+    </section>
 
-      <div class="panel pad">
-        <h2 class="section-title">Why AFT</h2>
-        <ul class="muted">
-          <li>Transparent pricing—no hidden fees.</li>
-          <li>Affiliate flywheel to compound organic growth.</li>
-          <li>Lean, practical MVP scope; partner-ready.</li>
-          <li>Consistent, credible brand presentation.</li>
-        </ul>
-        <div style="height:16px"></div>
-        <a class="btn primary" href="#invest-form">Share Investment Interest</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Program Summary -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Program Summary (Current)</h2>
-      <div class="cards">
-        <article class="card">
-          <h4>Fees</h4>
-          <ul class="muted">
-            <li><strong>Load:</strong> 4.5% (min $1.50)</li>
-            <li><strong>Withdrawal:</strong> 1.0% (min $1.00)</li>
-            <li><strong>Card Reissue:</strong> $5.00</li>
-            <li><strong>Monthly Maintenance:</strong> $0 (base tier)</li>
+    <section class="section container">
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="title"><span class="icon icon-fee"></span>Fees</div>
+          <ul class="bullets tight">
+            <li>Load: 4.5% (min $1.50)</li><li>Withdrawal: 1.0% (min $1.00)</li>
+            <li>Card Reissue: $5.00</li><li>Monthly Maintenance: $0 (base)</li>
+          </ul><p class="muted">Transparent pricing; no hidden fees.</p>
+        </div>
+        <div class="stat-card">
+          <div class="title"><span class="icon icon-tier"></span>User Tiers &amp; Affiliate</div>
+          <ul class="bullets tight">
+            <li>Tier 1: cap $500 lifetime</li><li>Tier 2 ($9.99/mo or $120/yr): card; cap $5,000</li>
+            <li>Tier 3 ($19.99/mo): highest limits &amp; priority payouts</li>
+            <li>Affiliate Share: 5% / 7% / 10%</li>
           </ul>
-        </article>
-        <article class="card">
-          <h4>User Tiers &amp; Affiliate</h4>
-          <ul class="muted">
-            <li><strong>Tier 1 (Free):</strong> Affiliate cap $500 lifetime</li>
-            <li><strong>Tier 2 ($9.99/mo or $120/yr):</strong> Card access; cap $5,000</li>
-            <li><strong>Tier 3 ($19.99/mo):</strong> Highest limits &amp; priority payouts</li>
-            <li><strong>Affiliate Share:</strong> 5% / 7.5% / 10% by tier</li>
+        </div>
+        <div class="stat-card">
+          <div class="title"><span class="icon icon-limit"></span>Limits &amp; Regions</div>
+          <ul class="bullets tight">
+            <li>Verified: $5,000 daily / $15,000 monthly</li>
+            <li>Unverified: up to $250 / 30 days P2P; no withdrawals</li>
+            <li>Regions: U.S. only at launch</li>
           </ul>
-        </article>
-        <article class="card">
-          <h4>Limits &amp; Regions</h4>
-          <ul class="muted">
-            <li><strong>Verified:</strong> $5,000 daily / $15,000 monthly</li>
-            <li><strong>Unverified (starter):</strong> up to $250 / 30 days P2P; no withdrawals</li>
-            <li><strong>Region:</strong> U.S. only at launch</li>
+        </div>
+        <div class="stat-card">
+          <div class="title"><span class="icon icon-card"></span>Cards &amp; Balance</div>
+          <ul class="bullets tight">
+            <li>Virtual + Physical (Apple Pay / Google Pay)</li>
+            <li>USD only; issued via approved partners</li>
           </ul>
-        </article>
-        <article class="card">
-          <h4>Cards &amp; Balance</h4>
-          <ul class="muted">
-            <li><strong>Card Types:</strong> Virtual + Physical (Apple Pay / Google Pay)</li>
-            <li><strong>Balance:</strong> USD only</li>
-            <li>Issued via approved banking partners; network rules apply.</li>
-          </ul>
-        </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Investor Contact (prefilled email) -->
-  <section class="section" id="invest-form">
-    <div class="container">
-      <div class="panel pad">
-        <h2 class="section-title">Investor Contact Form</h2>
-        <form id="investor-form" class="form" novalidate>
-          <div class="grid-2">
-            <label class="field">
-              <span>Full Name</span>
-              <input id="inv_name" type="text" placeholder="Your name" required />
-            </label>
-            <label class="field">
-              <span>Company / Fund</span>
-              <input id="inv_company" type="text" placeholder="Optional" />
-            </label>
-            <label class="field">
-              <span>Email</span>
-              <input id="inv_email" type="email" placeholder="you@domain.com" required />
-            </label>
-            <label class="field">
-              <span>Investment Interest</span>
-              <select id="inv_interest" required>
-                <option value="">Select</option>
-                <option>Pre-seed</option>
-                <option>Partial investment</option>
-                <option>Strategic partnership</option>
-                <option>Advisor</option>
-              </select>
-            </label>
-            <label class="field" style="grid-column:1 / -1;">
-              <span>Message</span>
-              <textarea id="inv_msg" rows="5" placeholder="Tell us about your background or interest…" required></textarea>
-            </label>
-          </div>
-          <button class="btn primary" type="submit">Submit Investment Interest</button>
-          <p id="invest-status" class="muted small"></p>
-        </form>
+    <section class="section container">
+      <div class="device-row">
+        <div class="device"><div class="screen"><span class="chip">Dashboard</span><button class="cta">View Metrics</button></div></div>
+        <div class="device"><div class="screen"><span class="chip">P2P Send</span><button class="cta">See Flow</button></div></div>
+        <div class="device"><div class="screen"><span class="chip">Affiliate</span><button class="cta">Growth Engine</button></div></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container foot-wrap">
-      <div>© <span id="y"></span> AFT Solutions LLC — All Rights Reserved</div>
-      <div class="foot-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="investment.html">Investment</a>
-      </div>
+    <section id="contact" class="section container">
+      <h2>Investor Contact Form</h2>
+      <form id="investorForm" class="form panel">
+        <div class="grid">
+          <label class="field"><span>Full Name</span>
+            <input type="text" name="name" placeholder="Your Name" required>
+          </label>
+          <label class="field"><span>Company / Fund Name</span>
+            <input type="text" name="company" placeholder="Optional">
+          </label>
+          <label class="field"><span>Email</span>
+            <input type="email" name="email" placeholder="you@domain.com" required>
+          </label>
+          <label class="field"><span>Phone</span>
+            <input type="tel" name="phone" placeholder="+1 (___) ___-____" required>
+          </label>
+          <label class="field"><span>Investment Interest</span>
+            <select name="interest" required>
+              <option value="" selected disabled>Select</option>
+              <option>Pre-seed ($25k–$100k)</option>
+              <option>Lead Pre-seed ($250k+)</option>
+              <option>Strategic Partnership</option>
+              <option>NDA / Data Room</option>
+            </select>
+          </label>
+          <label class="field col-12"><span>Message</span>
+            <textarea name="message" rows="5" placeholder="Tell us about your background or interest in AFT Solutions"></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn grad-btn">Submit Investment Interest</button>
+        <p class="muted tiny">Submits by opening your email client with all details prefilled (no backend).</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small">
+      <p>© <span id="y"></span> AFT Solutions LLC — All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- Prefilled Email (mailto:) -->
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
 
-    // Investor form -> mailto
-    document.getElementById('investor-form').addEventListener('submit', (e) => {
+    // Mailto prefill (includes phone)
+    document.getElementById('investorForm').addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('inv_name').value.trim();
-      const company = document.getElementById('inv_company').value.trim();
-      const email = document.getElementById('inv_email').value.trim();
-      const interest = document.getElementById('inv_interest').value;
-      const msg = document.getElementById('inv_msg').value.trim();
-      if (!name || !email || !interest || !msg) return;
-
-      const subject = encodeURIComponent(`Investor Interest — ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nCompany/Fund: ${company || '—'}\nEmail: ${email}\nInterest: ${interest}\n\nMessage:\n${msg}\n\n— Sent from aftsolutionsllc.com`
-      );
-      window.location.href = `mailto:admin@aftsolutionsllc.com?subject=${subject}&body=${body}`;
-      document.getElementById('invest-status').textContent = 'Opening your email app…';
+      const f = new FormData(e.target);
+      const d = Object.fromEntries(f.entries());
+      const body = [
+        `Name: ${d.name||''}`,
+        `Company/Fund: ${d.company||''}`,
+        `Email: ${d.email||''}`,
+        `Phone: ${d.phone||''}`,
+        `Interest: ${d.interest||''}`,
+        ``,
+        (d.message||'').trim()
+      ].join('%0D%0A');
+      const subject = encodeURIComponent('Investor Inquiry — AFT Solutions');
+      location.href = `mailto:admin@aftsolutionsllc.com?subject=${subject}&body=${body}`;
     });
   </script>
 </body>
